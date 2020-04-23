@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: rcww/podinfo
-      tag: dev-ggp9dpsy
+      tag: dev-9nozohci
     replicaCount: 1
     hpa:
       enabled: false
