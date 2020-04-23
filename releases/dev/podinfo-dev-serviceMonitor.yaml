@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: podinfo-dev
+  namespace: dev
+  labels:
+    k8s-app: podinfo
+    app: podinfo
+spec:
+  jobLabel: podinfo-dev
+  selector:
+    matchLabels:
+      app: podinfo
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
